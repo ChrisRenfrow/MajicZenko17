@@ -1,0 +1,19 @@
+{
+  "name": "majiczenko17",
+  "version": "1.0.0",
+  "description": "A payment and authentication extension for Zenko using Ethereum smart contracts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisRenfrow/MajicZenko17.git"
+  },
+  "author": "Anurag Mittal, Justin Chow, Isaac Rhett, Chris Renfrow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisRenfrow/MajicZenko17/issues"
+  },
+  "homepage": "https://github.com/ChrisRenfrow/MajicZenko17#readme"
+}
