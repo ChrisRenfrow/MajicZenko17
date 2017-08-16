@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import ReactDOM, { render } from 'react-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import NavBar from './navbar'
-import App from './window'
+import NavBar from './navbar.js'
+import App from './window.js'
 
 
 Router.location = '/';
