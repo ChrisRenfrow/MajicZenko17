@@ -3,15 +3,12 @@ import ReactDOM, { render } from 'react-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import NavBar from './navbar'
-import App from './window'
-
+import Window from './window'
 
 Router.location = '/';
 
 const root = document.querySelector('#root')
 const app = document.querySelector('#app')
 
-// render(<NavBar>
-//   <div style={styles.list}> Heyo </div>
-//   </NavBar>, root)
-render(<App />, app)
+render(<NavBar />, root)
+render(<Window />, app)
