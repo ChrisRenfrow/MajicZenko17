@@ -3,7 +3,8 @@ import ReactDOM, { render } from 'react-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import NavBar from './navbar'
-import Window from './window'
+import App from './window'
+
 
 Router.location = '/';
 

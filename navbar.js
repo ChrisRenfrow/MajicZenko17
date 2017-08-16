@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import ReactDOM, { render } from 'react-dom'
+import React, { Component } from 'react';
+import ReactDOM, { render } from 'react-dom';
 
 const styles = {
 	nav: {
@@ -29,4 +29,4 @@ class NavBar extends Component {
 	}
 }
 
-export default NavBar
+export default NavBar;
