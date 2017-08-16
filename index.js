@@ -11,7 +11,7 @@ Router.location = '/';
 const root = document.querySelector('#root')
 const app = document.querySelector('#app')
 
-// render(<NavBar>
-//   <div style={styles.list}> Heyo </div>
-//   </NavBar>, root)
+ render(<NavBar>
+   <div style={styles.list}> Heyo </div>
+   </NavBar>, root)
 render(<App />, app)
