@@ -13,7 +13,7 @@ const styles = {
 
 class Window extends Component {
   render() {
-    let style = {
+    const style = {
       margin: 20,
       marginLeft: 300,
       marginRight: 300,

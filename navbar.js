@@ -8,7 +8,7 @@ const styles = {
     	padding: 0,
     	overflow: 'hidden',
     	color: '#fff',
-      	backgroundColor: '#000',
+      	backgroundColor: '#ddd',
 	},
 	list: {
 		float: 'left',
