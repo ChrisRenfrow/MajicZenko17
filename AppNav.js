@@ -12,6 +12,7 @@ import RegisterIcon from 'react-material-icons/icons/content/create';
 import LoginIcon from 'react-material-icons/icons/communication/vpn-key';
 import DashboardIcon from 'react-material-icons/icons/action/dashboard';
 import SettingsIcon from 'react-material-icons/icons/action/settings';
+import UploadIcon from 'react-material-icons/icons/file/file-upload';
 import MenuIcon from 'react-material-icons/icons/navigation/menu';
 
 // import ZenkoLogo from './zenkologo.png'
@@ -58,6 +59,12 @@ class AppNav extends Component {
 							primaryText='Settings'
 							leftIcon={<SettingsIcon/>}
 							containerElement={<Link to='/settings'/>}
+							onClick={this.handleToggle}
+						/>
+						<MenuItem
+							primaryText='Upload'
+							leftIcon={<UploadIcon/>}
+							containerElement={<Link to='/fileupload'/>}
 							onClick={this.handleToggle}
 						/>
 				</Drawer>

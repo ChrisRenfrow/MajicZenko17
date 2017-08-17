@@ -22,10 +22,27 @@ class NavBar extends Component {
 
 	    return (
 	    	<div style={styles.nav}>
-	    		<div style={styles.list}>8======D</div>
+	    		<div style={styles.list}>text</div>
     		</div>
 	    )
 
+	}
+}
+
+class fileUpload extends Component {
+	render() {
+		return (
+			<div>
+				<form action="/upload"
+				method="post"
+				enctype="multipart/form-data">
+				<input type="file"
+				name="file"
+				value="val">
+				<input type="submit"
+				value="get size">
+			</div>
+		)
 	}
 }
 

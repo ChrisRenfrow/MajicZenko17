@@ -11,7 +11,7 @@ class Home extends Component {
 		return (
 			<div>
 				<div style={{margin: '40px 0px 0px 0px', display: 'flex', justifyContent: 'center'}}>
-					Making crypto-currency less cryptic and more fun.
+					Your dashboard for managing your storage.
 				</div>
 				<div style={{margin: '40px 0px 0px 0px', display: 'flex', justifyContent: 'center'}}>
 					<RaisedButton label='Get Started' primary={true} containerElement={<Link to='/register'/>}/>

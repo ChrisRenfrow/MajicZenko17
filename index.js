@@ -25,6 +25,7 @@ import Login from './Login'
 import Register from './Register'
 import Dashboard from './Dashboard'
 import Settings from './Settings'
+import FileUpload from './FileUpload'
 
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme'
@@ -35,7 +36,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 var injectTapEventPlugin = require("react-tap-event-plugin")
 injectTapEventPlugin()
 
-Router.location = '/'
+Router.location = '/home'
 render(
     <Router>
         <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
@@ -46,6 +47,7 @@ render(
                 <Route path="/register" component={Register}/>
                 <Route path="/dashboard" component={Dashboard}/>
                 <Route path="/settings" component={Settings}/>
+                <Route path="/fileupload" component={FileUpload}/>
             </div>
         </MuiThemeProvider>
     </Router>,

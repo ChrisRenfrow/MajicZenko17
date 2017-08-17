@@ -30,9 +30,8 @@ class Settings extends Component {
 			<div>
 				<div style={sectionStyle}>
 					<div style={noticeStyle}>Settings</div>
-				</div>
 				<div>
-					<SelectField
+					<SelectField style={"text-align: left"}
 						floatingLabelText="Frequency"
 						value={this.state.value}
 						onChange={this.handleChange}
@@ -42,6 +41,7 @@ class Settings extends Component {
 						<MenuItem value={3} primaryText="Just me" />
 						<MenuItem value={4} primaryText="Nobody" />
 					</SelectField>
+				</div>
 				</div>
 				<br/>
 			</div>
