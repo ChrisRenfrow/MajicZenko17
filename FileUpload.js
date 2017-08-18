@@ -90,12 +90,12 @@ class FileUpload extends Component {
 	    // '/files' is your node.js route that triggers our middleware
 	    axios.post('/files', data).then((response) => {
 	      console.log(response); // do something with the response
-	};
+	},
 
 	render() {
 		return (
 			<div>
-				<form action="/upload" method="post" enctype="multipart/form-data">
+				{/*<form action="/upload" method="post" enctype="multipart/form-data">*/}
 
 					<input style={styles.input} type="file" name="file" value="val" id="upload-file"/>
 
@@ -108,7 +108,7 @@ class FileUpload extends Component {
 					<RaisedButton label="Upload" primary={true} style={styles.button}
 					onClick={(event) => document.getElementById('submit-file').click()} />
 
-				</form>
+				{/*</form>*/}
 			</div>
 		)
 	}
