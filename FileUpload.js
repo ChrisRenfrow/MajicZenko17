@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 import RaisedButton from 'material-ui/RaisedButton'
 
+import express from 'express'
+import multer from './multer'
+const router = express.Router();
+
+// import axios from 'axios'
+
+
 const styles = {
 
 	label: {
@@ -61,21 +68,71 @@ const styles = {
 	}
 }
 
+router.post('/upload', multer.upload.single('file'), (req, res) => {
+  if (req.file) {
+    res.status(200).json({
+      size: req.file.size
+    });
+  } else {
+    res.status(500).json({
+      error: 'No file uploaded.'
+    });
+  }
+})
+
 class FileUpload extends Component {
+
+	  handleUploadFile = (event) => {
+	    const data = new FormData();
+	    data.append('file', event.target.files[0]);
+	    data.append('name', 'some value user types');
+	    data.append('description', 'some value user types');
+	    // '/files' is your node.js route that triggers our middleware
+	    axios.post('/files', data).then((response) => {
+	      console.log(response); // do something with the response
+	};
+
 	render() {
 		return (
 			<div>
 				<form action="/upload" method="post" enctype="multipart/form-data">
-					<label for="upload-file" style={styles.label}>
-						<span style={styles.text}>Browse...</span>
-					</label>
-					<input type="file" name="file" value="val"  id="upload-file"/>
+
+					<input style={styles.input} type="file" name="file" value="val" id="upload-file"/>
+
+					<input style={styles.input} type="submit" value='val' id="submit-file"
+					onchange={this.handleUploadFile} />
+
+					<RaisedButton label="Browse..." primary={true} style={styles.button}
+					onClick={(event) => document.getElementById('upload-file').click()} />
+
 					<RaisedButton label="Upload" primary={true} style={styles.button}
-					onClick={(event) => this.handleClick(event)} />
+					onClick={(event) => document.getElementById('submit-file').click()} />
+
 				</form>
 			</div>
 		)
 	}
 }
-
 export default FileUpload
+
+
+// class uploadMyFile extends Component {
+//   handleUploadFile = (event) => {
+//     const data = new FormData();
+//     data.append('file', event.target.files[0]);
+//     data.append('name', 'some value user types');
+//     data.append('description', 'some value user types');
+//     // '/files' is your node.js route that triggers our middleware
+//     axios.post('/files', data).then((response) => {
+//       console.log(response); // do something with the response
+//     });
+    
+//     render() {
+//       <div>
+//         <input type="file" onChange={this.handleUploadFile} />
+//       </div>
+//     }
+// }
+
+// export default uploadMyFile;
+
